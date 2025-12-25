@@ -5,8 +5,6 @@ from pyrogram.types import *
 from pyrogram.errors import ApiIdInvalid, PhoneNumberInvalid, PhoneCodeInvalid, PhoneCodeExpired, SessionPasswordNeeded, PasswordHashInvalid
 from config import *
 from .db import tb
-from .fsub import get_fsub
-from .maintenance import get_maintenance
 
 SESSION_STRING_SIZE = 351
 
@@ -21,10 +19,6 @@ async def logout(client, message):
 
 @Client.on_message(filters.private & ~filters.forwarded & filters.command(["login"]))
 async def main(bot: Client, message: Message):
-    if IS_FSUB and not await get_fsub(bot, message): return
-    if await get_maintenance() and message.from_user.id != ADMIN:
-        await message.delete()
-        return await message.reply_text(f"<b>{message.from_user.mention},\n\nᴛʜɪꜱ ʙᴏᴛ ɪꜱ ᴄᴜʀʀᴇɴᴛʟʏ ᴜɴᴅᴇʀ ᴍᴀɪɴᴛᴇɴᴀɴᴄᴇ.\n\n<blockquote>ᴄᴏɴᴛᴀᴄᴛ ᴏᴡɴᴇʀ ꜰᴏʀ ᴍᴏʀᴇ ɪɴꜰᴏ.</blockquote></b>", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👨‍💻 ᴏᴡɴᴇʀ 👨‍💻", user_id=int(ADMIN))]]))
     user_id = message.from_user.id
     session = await tb.get_session(user_id)
     if session is not None:
