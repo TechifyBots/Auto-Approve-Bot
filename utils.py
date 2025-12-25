@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from pyrogram.enums import ParseMode
 from pyrogram.errors import UserNotParticipant, ChatAdminRequired
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ChatJoinRequest
-from config import ADMIN AUTH_CHANNELS AUTH_REQ_CHANNELS, FSUB_EXPIRE, IS_FSUB
+from config import ADMIN, AUTH_CHANNELS, AUTH_REQ_CHANNELS, FSUB_EXPIRE, IS_FSUB
 from TechifyBots.db import tb
 
 def is_auth_req_channel(_, __, update):
