@@ -16,6 +16,7 @@
 - Multi Force Sub available
 - Broadcast available
 - Maintenance mode
+- Ban & Unban feature
 - Deploy To Koyeb + Heroku + Railway + Render + VPS + Okteto
 - [Developer support](https://telegram.me/TechifySupport) 24x7
 </details>
@@ -31,7 +32,7 @@ logout : logout your telegram account
 accept : accept all pending request form channel or group.
 ban - to ban a user.
 unban - to unban a user.
-banned - to check banned users.
+banlist - to check banned users.
 maintenance - Toggle maintenance mode
 broadcast - Broadcast Massage Send All Users In Bot.
 ```
