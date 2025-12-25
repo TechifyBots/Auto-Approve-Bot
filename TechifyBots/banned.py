@@ -11,11 +11,7 @@ class TechifyBots:
 
     async def ban_user(self, user_id: int, reason: str = None) -> bool:
         try:
-            await self.banned_users.update_one(
-                {"user_id": user_id},
-                {"$set": {"reason": reason}},
-                upsert=True
-            )
+            await self.banned_users.update_one({"user_id": user_id},{"$set": {"reason": reason}},upsert=True)
             return True
         except Exception:
             return False
@@ -46,7 +42,7 @@ async def global_ban_checker(_, m: Message):
     text = "🚫 **You are banned from using this bot.**"
     if ban.get("reason"):
         text += f"\n\n**Reason:** {ban['reason']}"
-    await m.reply_text(text, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👨‍💻 OWNER 👨‍💻", user_id=int(ADMIN))]]))
+    await m.reply_text(text,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("👨‍💻 OWNER 👨‍💻",user_id=int(ADMIN))]]))
     await m.stop_propagation()
 
 @Client.on_message(filters.command("ban") & filters.private & filters.user(ADMIN))
@@ -83,10 +79,7 @@ async def unban_cmd(c: Client, m: Message):
     if await tb.unban_user(user_id):
         await m.reply(f"✅ **User `{user_id}` unbanned.**")
         try:
-            await c.send_message(
-                user_id,
-                "✅ **You have been unbanned.**\n\nYou can now use the bot again."
-            )
+            await c.send_message(user_id,"✅ **You have been unbanned.**\n\nYou can now use the bot again.")
         except:
             pass
     else:
