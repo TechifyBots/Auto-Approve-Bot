@@ -77,13 +77,13 @@ async def del_requests(client: Client, message: Message):
     await tb.del_join_req()
     await message.reply("**⚙ Successfully join request cache deleted.**")
 
-@Client.on_message(filters.private & ~filters.user(ADMIN), group=-10)
+@Client.on_message(filters.private & ~filters.command() & ~filters.user(ADMIN), group=-10)
 async def global_fsub_checker(client: Client, message: Message):
     if not IS_FSUB:
         return
     await get_fsub(client, message)
 
-@Client.on_message(filters.private & ~filters.user(ADMIN), group=-2)
+@Client.on_message(filters.private & ~filters.command() & ~filters.user(ADMIN), group=-2)
 async def global_ban_checker(_, m: Message):
     if not m.from_user:
         return
@@ -150,7 +150,7 @@ async def banned_cmd(_, m: Message):
         text += f"• `{u['user_id']}` — {u.get('reason','No reason')}\n"
     await m.reply(text)
 
-@Client.on_message(filters.private & ~filters.user(ADMIN), group=-1)
+@Client.on_message(filters.private & ~filters.command() & ~filters.user(ADMIN), group=-1)
 async def maintenance_blocker(_, m: Message):
     if not await tb.get_maintenance():
         return
