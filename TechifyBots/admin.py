@@ -4,7 +4,7 @@ from pyrogram.errors import FloodWait, UserIsBlocked, PeerIdInvalid, InputUserDe
 import asyncio
 import re
 from config import ADMIN
-from .db import tb
+from .database import tb
 from collections import defaultdict
 
 def parse_button_markup(text: str):
