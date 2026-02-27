@@ -46,7 +46,7 @@ broadcast - Broadcast Massage Send All Users In Bot.
 - `API_HASH` - Your Telegram API HASH.Get it [Here](https://youtu.be/y5FwAobQ-Kc)
 - `PICS` - Your bot start images (you can add multiple images)
 - `DB_URI` - Mongodb [Database](https://youtu.be/j8LIuM7vv18)
-- `BOT_TOKEN` - Get From [BotFather](https://youtu.be/aJILCCXfNVM)
+- `BOT_TOKEN` - Get From [BotFather](https://youtu.be/rUEKDOSPFho)
  - `IS_FSUB` : True/False FSUB accordingly.
 - `FSUB_EXPIRE` : Your FSUB link expire time.
 - `AUTH_CHANNELS` : Your Public & Private FSUB channels IDs.
