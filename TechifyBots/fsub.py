@@ -146,7 +146,7 @@ async def get_fsub(bot: Client, message: Message) -> bool:
                 row.append(InlineKeyboardButton(f"{i + j + 1}. {title}", url=link))
         buttons.append(row)
     buttons.append([InlineKeyboardButton("🔄 𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇", url=f"https://telegram.me/{bot_user.username}?start=start")])
-    msg = await message.reply(f"**{message.from_user.mention},\n\n𝖸𝗈𝗎 𝗆𝗎𝗌𝗍 𝗃𝗈𝗂𝗇 𝖠𝖫𝖫 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝖻𝖾𝗅𝗈𝗐 𝗍𝗈 𝗎𝗌𝖾 𝗍𝗁𝖾 𝖻𝗈𝗍!\n\n𝖱𝖾𝗊𝗎𝗂𝗋𝖾𝖽 𝖢𝗁𝖺𝗇𝗇𝖾𝗅𝗌 ({len(missing)}):**", reply_markup=InlineKeyboardMarkup(buttons))
+    msg = await message.reply(f"<blockquote>**🔒 𝖠𝖼𝖼𝖾𝗌𝗌 𝖱𝖾𝗌𝗍𝗋𝗂𝖼𝗍𝖾𝖽!**</blockquote>\n\n{message.from_user.mention}, 𝖳𝗈 𝖴𝗌𝖾 𝖳𝗁𝗂𝗌 𝖡𝗈𝗍, 𝖸𝗈𝗎 𝖭𝖾𝖾𝖽 𝖳𝗈 𝖩𝗈𝗂𝗇 𝖠𝖫𝖫 𝖱𝖾𝗊𝗎𝗂𝗋𝖾𝖽 𝖢𝗁𝖺𝗇𝗇𝖾𝗅𝗌.\n\n𝖱𝖾𝗊𝗎𝗂𝗋𝖾𝖽 𝖢𝗁𝖺𝗇𝗇𝖾𝗅𝗌 ({len(missing)})\n\n𝖠𝖿𝗍𝖾𝗋 𝖩𝗈𝗂𝗇𝗂𝗇𝗀, 𝖢𝗅𝗂𝖼𝗄 **“𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇”** 𝖡𝖾𝗅𝗈𝗐.", reply_markup=InlineKeyboardMarkup(buttons))
     await tb.save_fsub_msg(user_id, msg.id)
     return False
 
