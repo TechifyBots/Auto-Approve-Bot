@@ -5,7 +5,7 @@ motor
 aiohttp
 
 # For Web Deployable
-Flask
+flask
 gunicorn
 Jinja2
 werkzeug
