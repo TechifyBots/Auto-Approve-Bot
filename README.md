@@ -10,8 +10,8 @@
 
 <details><summary>Tap On Me For Bot Features</summary>
 
- - Automatically approve join request in channel Or groups.
- - Pending request also approved in channel Or groups.
+- Automatically approve join request in channel Or groups.
+- Pending request also approved in channel Or groups.
 - Fully modified repo
 - Multi Force Sub available
 - Broadcast available
