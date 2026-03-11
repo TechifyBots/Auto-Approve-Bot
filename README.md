@@ -48,7 +48,7 @@ broadcast - Broadcast Massage Send All Users In Bot.
 - `DB_URI` : Mongodb [Database](https://youtu.be/j8LIuM7vv18)
 - `ADMIN` : Your Telegram ID.
 - `PICS` - Your bot start images (you can add multiple images)
- - `IS_FSUB` : True/False FSUB accordingly.
+- `IS_FSUB` : True/False FSUB accordingly.
 - `FSUB_EXPIRE` : Your FSUB link expire time.
 - `AUTH_CHANNELS` : Your Public & Private FSUB channels IDs.
 - `AUTH_REQ_CHANNELS` : Your Private Request FSUB channels IDs.
