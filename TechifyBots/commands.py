@@ -9,9 +9,9 @@ from .database import tb
 
 @Client.on_message(filters.command("start") & filters.private)
 async def start_cmd(client, message):
+    bot = await client.get_me()
     if await tb.get_user(message.from_user.id) is None:
         await tb.add_user(message.from_user.id, message.from_user.first_name)
-        bot = await client.get_me()
         await client.send_message(
             LOG_CHANNEL,
             text.LOG.format(
@@ -26,10 +26,10 @@ async def start_cmd(client, message):
         photo=random.choice(PICS),
         caption=text.START.format(message.from_user.mention),
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton('⇆ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ⇆', url=f"https://telegram.me/QuickAcceptBot?startgroup=true&admin=invite_users")],
+            [InlineKeyboardButton('⇆ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖦𝗋𝗈𝗎𝗉 ⇆', url=f"https://telegram.me/{bot.username}?startgroup=true&admin=invite_users")],
             [InlineKeyboardButton('ℹ️ 𝖠𝖻𝗈𝗎𝗍', callback_data='about'),
              InlineKeyboardButton('📚 𝖧𝖾𝗅𝗉', callback_data='help')],
-            [InlineKeyboardButton('⇆ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 ⇆', url=f"https://telegram.me/QuickAcceptBot?startchannel=true&admin=invite_users")]
+            [InlineKeyboardButton('⇆ 𝖠𝖽𝖽 𝖬𝖾 𝖳𝗈 𝖸𝗈𝗎𝗋 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 ⇆', url=f"https://telegram.me/{bot.username}?startchannel=true&admin=invite_users")]
             ])
         )
 
