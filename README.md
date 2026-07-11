@@ -149,7 +149,7 @@ Need help deploying this project? We've got you covered.
 
 <p align="center">
   <a href="./LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-8B5CF6?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License" />
+    <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="License" />
   </a>
 </p>
 
