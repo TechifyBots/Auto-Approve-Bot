@@ -177,13 +177,13 @@ See the **[LICENSE](./LICENSE)** file for complete details.
 
 <a href="https://telegram.me/TechifyBots"><img src="https://tgcards.vercel.app/?username=TechifyBots&fontFamily=%27Times+New+Roman%27%2C+serif&verified=true" alt="Channel"></a>
 <br>
-<a href="https://t.me/TechifySupport"><img src="https://tgcards.vercel.app/?username=TechifySupport&theme=light" alt="Group"></a>
+<a href="https://telegram.me/TechifySupport"><img src="https://tgcards.vercel.app/?username=TechifySupport&theme=light" alt="Group"></a>
 
 </div>
 
 ---
 
-## 👨‍💻 Author
+## 👤 Author
 
 <p align="center">
   <b style="font-size: 5.5em;">Rahul Dhankhar</b>
