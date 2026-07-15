@@ -12,10 +12,10 @@ A <b>modern</b>, <b>open-source</b>, and <b>developer-friendly</b> Telegram bot 
 
 
 [![Last Commit](https://img.shields.io/github/last-commit/TechifyBots/Auto-Approve-Bot?style=for-the-badge)](https://github.com/TechifyBots/Auto-Approve-Bot/commits)
-
+<br>
 [![GitHub Stars](https://img.shields.io/github/stars/TechifyBots/Auto-Approve-Bot?style=for-the-badge)](https://github.com/TechifyBots/Auto-Approve-Bot/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/TechifyBots/Auto-Approve-Bot?style=for-the-badge)](https://github.com/TechifyBots/Auto-Approve-Bot/fork)
-
+<br>
 [![Repo Size](https://img.shields.io/github/repo-size/TechifyBots/Auto-Approve-Bot?style=for-the-badge&color=8B5CF6)](https://github.com/TechifyBots/Auto-Approve-Bot)
 
 </div>
@@ -194,7 +194,7 @@ See the **[LICENSE](./LICENSE)** file for complete details.
 <a href="https://telegram.me/ImRahulDhankhar"><img src="https://img.shields.io/badge/Telegram-26A5E4?style=for-the-badge&logo=telegram&logoColor=white"></a>
 <a href="https://instagram.com/ImRahulDhankhar"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"></a>
 <a href="https://youtube.com/@TechifyBots"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"></a>
-<br><br>
+<br>
 <a href="https://techifybots.github.io/PayWeb">
   <img src="https://img.shields.io/badge/💖-Support_Development-ff4d6d?style=for-the-badge">
 </a>
