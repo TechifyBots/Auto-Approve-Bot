@@ -28,6 +28,7 @@ A <b>modern</b>, <b>open-source</b>, and <b>developer-friendly</b> Telegram bot 
 
 - 🌸 **[Overview](#-overview)**
 - ✨ **[Features](#-features)**
+- 🎥 **[Quick Start](#-quick-start)**
 - ⚙️ **[Configuration](#️-configuration)**
 - 🤖 **[Commands](#-commands)**
 - 🚀 **[Deployment](#-deployment)**
@@ -71,6 +72,16 @@ A <b>modern</b>, <b>open-source</b>, and <b>developer-friendly</b> Telegram bot 
 - ⚙️ **Easy to Customize** — Clean and beginner-friendly source code
 - 🚀 **Multi-Platform Deployment** — Deploy on Koyeb, Railway, Render, VPS & more
 - 💬 **24/7 Developer Support** — Get help whenever you need it
+
+---
+
+## 🎥 Quick Start
+
+New to this project?
+
+Watch this short video to understand **what the bot is**, **why it's useful**, **how it works**, explore its **key features**, and learn the **required configuration** before deployment.
+
+📺 **Watch on YouTube: *[Project Overview](https://youtu.be/vNyvyCVer4g)***
 
 ---
 
