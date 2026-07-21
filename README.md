@@ -86,7 +86,7 @@ Watch this short video to understand **what the bot is**, **why it's useful**, *
 ---
 
 
-## ⚙️ Configuration
+## 📝 Configuration
 
 
 | Variable | Description |
