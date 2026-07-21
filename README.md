@@ -29,7 +29,7 @@ A <b>modern</b>, <b>open-source</b>, and <b>developer-friendly</b> Telegram bot 
 - 🌸 **[Overview](#-overview)**
 - ✨ **[Features](#-features)**
 - 🎥 **[Quick Start](#-quick-start)**
-- ⚙️ **[Configuration](#️-configuration)**
+- ⚙️ **[Configuration](#-configuration)**
 - 🤖 **[Commands](#-commands)**
 - 🚀 **[Deployment](#-deployment)**
 - 🤝 **[Contributing](#-contributing)**
@@ -86,7 +86,7 @@ Watch this short video to understand **what the bot is**, **why it's useful**, *
 ---
 
 
-## 📝 Configuration
+## ⚙️ Configuration
 
 
 | Variable | Description |
