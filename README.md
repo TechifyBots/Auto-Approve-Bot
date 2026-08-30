@@ -18,7 +18,7 @@ A <b>modern</b>, <b>open-source</b>, and <b>developer-friendly</b> Telegram bot 
 <br>
 [![Repo Size](https://img.shields.io/github/repo-size/TechifyBots/Auto-Approve-Bot?style=for-the-badge&color=8B5CF6)](https://github.com/TechifyBots/Auto-Approve-Bot)
 <br>
-[![Telegram Bot](https://img.shields.io/badge/Telegram%20Bot-QuickAcceptBot-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://telegram.me/QuickAcceptBot)
+[![Telegram Bot](https://img.shields.io/badge/Telegram-Bot-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://telegram.me/QuickAcceptBot)
 
 </div>
 
