@@ -95,7 +95,7 @@ Watch this short video to understand **what the bot is**, **why it's useful**, *
 |:---------|:------------|
 | `API_ID` | Telegram API ID |
 | `API_HASH` | Telegram API Hash |
-| `BOT_TOKEN` | Bot Token |
+| `BOT_TOKEN` | Telegram Bot Token |
 | `DB_URI` | MongoDB URI |
 | `ADMIN` | Telegram User ID |
 | `PICS` | Start Images |
