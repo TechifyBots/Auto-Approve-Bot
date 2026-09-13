@@ -28,7 +28,7 @@ class Bot(Client):
             sleep_threshold=15
         )
 
-    async def start(self):
+    async def start(self, *args, **kwargs):
         app = web.AppRunner(await web_server())
         await app.setup()
         try:
@@ -37,15 +37,16 @@ class Bot(Client):
         except Exception as e:
             print(f"Web server error: {e}")
 
-
-        await super().start()
+        await super().start(*args, **kwargs)
         me = await self.get_me()
         print(f"Bot Started as {me.first_name}")
+
         if isinstance(ADMIN, int):
             try:
                 await self.send_message(ADMIN, f"**{me.first_name} is started...**")
             except Exception as e:
                 print(f"Error sending message to admin: {e}")
+
         if LOG_CHANNEL:
             try:
                 now = datetime.now(timezone("Asia/Kolkata"))
@@ -61,6 +62,6 @@ class Bot(Client):
 
     async def stop(self, *args):
         await super().stop()
-        print(f"{me.first_name} Bot stopped.")
+        print("Bot stopped.")
 
 Bot().run()
