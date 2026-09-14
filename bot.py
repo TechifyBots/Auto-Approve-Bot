@@ -60,8 +60,8 @@ class Bot(Client):
             except Exception as e:
                 print(f"Error sending to LOG_CHANNEL: {e}")
 
-    async def stop(self, *args):
-        await super().stop()
+    async def stop(self, *args, **kwargs):
+        await super().stop(*args, **kwargs)
         print("Bot stopped.")
 
 if __name__ == "__main__":
