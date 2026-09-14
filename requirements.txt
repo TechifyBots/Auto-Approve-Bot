@@ -1,12 +1,4 @@
 pyrofork==2.3.69
 pytz
-tgcrypto
 motor
 aiohttp
-
-# For Web Deployable
-flask
-gunicorn
-Jinja2
-werkzeug
-itsdangerous
