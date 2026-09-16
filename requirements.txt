@@ -1,4 +1,4 @@
-pyrofork==2.3.69
+kurigram
 pytz
 motor
 aiohttp
