@@ -62,7 +62,7 @@ async def auto_delete_fsub_and_start(client: Client, user_id: int):
     user = await client.get_users(user_id)
     bot_user = await client.get_me()
     try:
-        await client.send_message(user_id, f"**{user.mention},\n\nʏᴏᴜ ʜᴀᴠᴇ ᴊᴏɪɴᴇᴅ ᴀʟʟ ʀᴇǫᴜɪʀᴇᴅ ᴄʜᴀɴɴᴇʟs.\n\nᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("▶️ 𝖲𝗍𝖺𝗋𝗍", url=f"https://telegram.me/{bot_user.username}?start=start")]]))
+        await client.send_message(user_id, f"**{user.mention},\n\nʏᴏᴜ ʜᴀᴠᴇ ᴊᴏɪɴᴇᴅ ᴀʟʟ ʀᴇǫᴜɪʀᴇᴅ ᴄʜᴀɴɴᴇʟs.\n\nᴄʟɪᴄᴋ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ**", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("▶️ 𝖲𝗍𝖺𝗋𝗍", url=f"https://telegram.me/{bot_user.username}?start=start", style=enums.ButtonStyle.PRIMARY)]]))
     except Exception as e:
         logging.error(f"Failed to send start link to {user_id}: {e}")
 
@@ -145,7 +145,7 @@ async def get_fsub(bot: Client, message: Message) -> bool:
                 title, link = missing[i + j]
                 row.append(InlineKeyboardButton(f"{i + j + 1}. {title}", url=link))
         buttons.append(row)
-    buttons.append([InlineKeyboardButton("🔄 𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇", url=f"https://telegram.me/{bot_user.username}?start=start")])
+    buttons.append([InlineKeyboardButton("🔄 𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇", url=f"https://telegram.me/{bot_user.username}?start=start", style=enums.ButtonStyle.PRIMARY)])
     msg = await message.reply(f"<blockquote>**🔒 𝖠𝖼𝖼𝖾𝗌𝗌 𝖱𝖾𝗌𝗍𝗋𝗂𝖼𝗍𝖾𝖽!**</blockquote>\n\n{message.from_user.mention}, 𝖳𝗈 𝖴𝗌𝖾 𝖳𝗁𝗂𝗌 𝖡𝗈𝗍, 𝖸𝗈𝗎 𝖭𝖾𝖾𝖽 𝖳𝗈 𝖩𝗈𝗂𝗇 𝖠𝖫𝖫 𝖱𝖾𝗊𝗎𝗂𝗋𝖾𝖽 𝖢𝗁𝖺𝗇𝗇𝖾𝗅𝗌.\n\n𝖱𝖾𝗊𝗎𝗂𝗋𝖾𝖽 𝖢𝗁𝖺𝗇𝗇𝖾𝗅𝗌 ({len(missing)})\n\n𝖠𝖿𝗍𝖾𝗋 𝖩𝗈𝗂𝗇𝗂𝗇𝗀, 𝖢𝗅𝗂𝖼𝗄 **“𝖳𝗋𝗒 𝖠𝗀𝖺𝗂𝗇”** 𝖡𝖾𝗅𝗈𝗐.", reply_markup=InlineKeyboardMarkup(buttons))
     await tb.save_fsub_msg(user_id, msg.id)
     return False
