@@ -28,16 +28,6 @@ def parse_button_markup(text: str):
             final_text_lines.append(line)
     return InlineKeyboardMarkup(buttons) if buttons else None, "\n".join(final_text_lines).strip()
 
-@Client.on_message(filters.command("stats") & filters.private & filters.user(ADMIN))
-async def total_users(client: Client, message: Message):
-    try:
-        users = await tb.get_all_users()
-        await message.reply_text(f"👥 **Total Users:** {len(users)}",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🎭 𝖢𝗅𝗈𝗌𝖾", callback_data="close", style=enums.ButtonStyle.DANGER)]]))
-    except Exception as e:
-        r=await message.reply(f"❌ *Error:* `{str(e)}`")
-        await asyncio.sleep(30)
-        await r.delete()
-
 @Client.on_message(filters.command("broadcast") & filters.private & filters.user(ADMIN))
 async def broadcasting_func(client: Client, message: Message):
     if not message.reply_to_message:
