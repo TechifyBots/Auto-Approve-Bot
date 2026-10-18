@@ -18,7 +18,7 @@ class text(object):
 
     ABOUT = """<blockquote>🤖 𝗕𝗼𝘁 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻</blockquote>
 
-<b>‣ 𝖬𝗒 𝖭𝖺𝗆𝖾 :</b> <a href='https://youtube.com/@techifybots'>𝖳𝖾𝖼𝗁𝗂𝖿𝗒 𝖡𝗈𝗍𝗌</a>
+<b>‣ 𝖬𝗒 𝖭𝖺𝗆𝖾 :</b> <a href='https://youtube.com/@techifybots'>𝖠𝗇𝗒𝖺 𝖠𝗉𝗉𝗋𝗈𝗏𝖾 𝖡𝗈𝗍</a>
 <b>‣ 𝖵𝖾𝗋𝗌𝗂𝗈𝗇 :</b> v{}
 <b>‣ 𝖫𝗂𝖻𝗋𝖺𝗋𝗒 :</b> <a href='https://docs.pyrogram.org/'>𝖯𝗒𝗋𝗈𝗀𝗋𝖺𝗆</a>
 <b>‣ 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 :</b> <a href='https://www.mongodb.com/'>𝖬𝗈𝗇𝗀𝗈𝖣𝖡</a>
@@ -41,6 +41,18 @@ class text(object):
 💳 <b>𝖴𝖯𝖨 𝖨𝖣:</b> <code>RahulDhankhar@UPI</code>
 
 <blockquote><i>𝖤𝗏𝖾𝗋𝗒 𝖼𝗈𝗇𝗍𝗋𝗂𝖻𝗎𝗍𝗂𝗈𝗇 𝗄𝖾𝖾𝗉𝗌 𝗍𝗁𝖾 𝗌𝖾𝗋𝗏𝖾𝗋𝗌 𝗁𝗎𝗆𝗆𝗂𝗇𝗀. 𝖳𝗁𝖺𝗇𝗄 𝗒𝗈𝗎! 💖</i></blockquote>"""
+
+    STATS = """<blockquote>📊 𝗕𝗼𝘁 𝗦𝘁𝗮𝘁𝗶𝘀𝘁𝗶𝗰𝘀</blockquote>
+
+✅ <b>𝖳𝗈𝗍𝖺𝗅 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝗌 𝖠𝗉𝗉𝗋𝗈𝗏𝖾𝖽:</b> <code>{approved:,}</code>
+
+📢 <b>𝖳𝗈𝗍𝖺𝗅 𝖢𝗁𝖺𝗇𝗇𝖾𝗅𝗌:</b> <code>{channels:,}</code>
+
+👥 <b>𝖳𝗈𝗍𝖺𝗅 𝖦𝗋𝗈𝗎𝗉𝗌:</b> <code>{groups:,}</code>
+
+👤 <b>𝖳𝗈𝗍𝖺𝗅 𝖴𝗌𝖾𝗋𝗌:</b> <code>{users:,}</code>
+
+<i>𝖤𝗏𝖾𝗋𝗒𝗍𝗁𝗂𝗇𝗀 𝗂𝗌 𝗋𝗎𝗇𝗇𝗂𝗇𝗀 𝗌𝗆𝗈𝗈𝗍𝗁𝗅𝗒 ✨</i>"""
 
     HELP = """{},
 
