@@ -8,7 +8,8 @@ from pyrogram.types import (
     WebAppInfo,
 )
 from Script import text
-from config import ADMIN, PICS, VERSION
+from config import PICS, VERSION, ADMIN
+from .database import tb
 
 @Client.on_callback_query()
 async def callback_query_handler(client, query: CallbackQuery):
@@ -34,7 +35,7 @@ async def callback_query_handler(client, query: CallbackQuery):
                 caption=text.HELP.format(query.from_user.mention)
             ),
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton('💬 𝖲𝗎𝗉𝗉𝗈𝗋𝗍 💬', url='https://telegram.me/TechifySupport')],
+                [InlineKeyboardButton('👨‍💻 𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋 👨‍💻', user_id=int(ADMIN))],
                 [InlineKeyboardButton('↩️ 𝖡𝖺𝖼𝗄', callback_data='start', style=enums.ButtonStyle.PRIMARY),
                  InlineKeyboardButton('❌ 𝖢𝗅𝗈𝗌𝖾', callback_data='close', style=enums.ButtonStyle.DANGER)]
             ])
@@ -49,8 +50,28 @@ async def callback_query_handler(client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton('📂 𝖲𝗈𝗎𝗋𝖼𝖾 𝖢𝗈𝖽𝖾', url='https://github.com/TechifyBots/Auto-Approve-Bot')],
                 [InlineKeyboardButton('☕ 𝖣𝗈𝗇𝖺𝗍𝖾', callback_data='donate'),
-                 InlineKeyboardButton('👨‍💻 𝖢𝗋𝖾𝖺𝗍𝗈𝗋', user_id=int(ADMIN))],
+                 InlineKeyboardButton('📊 𝖲𝗍𝖺𝗍𝗌', callback_data='stats')],
                 [InlineKeyboardButton('↩️ 𝖡𝖺𝖼𝗄', callback_data='start', style=enums.ButtonStyle.PRIMARY)]
+            ])
+        )
+
+    elif query.data == "stats":
+        try:
+            users = await tb.get_all_users()
+            approved = await tb.get_total_approved_requests()
+            chats = await tb.get_tracked_chats()
+            channels = sum(1 for chat in chats if chat.get("chat_type") == "channel")
+            groups = sum(1 for chat in chats if chat.get("chat_type") in ("group", "supergroup"))
+            caption = text.STATS.format(approved=approved, channels=channels, groups=groups, users=len(users))
+        except Exception as e:
+            caption = f"❌ **Unable to load statistics.**\n\n`{e}`"
+
+        await query.message.edit_media(
+            InputMediaPhoto(media=random.choice(PICS), caption=caption),
+            reply_markup=InlineKeyboardMarkup([
+                [InlineKeyboardButton('🌐 𝖶𝖾𝖻𝗌𝗂𝗍𝖾', web_app=WebAppInfo(url='https://anyaapprovebot.onrender.com'))],
+                [InlineKeyboardButton('↩️ 𝖡𝖺𝖼𝗄', callback_data='about', style=enums.ButtonStyle.PRIMARY),
+                 InlineKeyboardButton('❌ 𝖢𝗅𝗈𝗌𝖾', callback_data='close', style=enums.ButtonStyle.DANGER)]
             ])
         )
 
