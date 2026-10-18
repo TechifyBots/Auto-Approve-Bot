@@ -11,6 +11,8 @@ db = client[DB_NAME]
 class Techifybots:
     def __init__(self):
         self.users = db["users"]
+        self.stats = db["bot_stats"]
+        self.tracked_chats = db["tracked_chats"]
         self.cache: dict[int, dict[str, Any]] = {}
 
     async def add_user(self, user_id: int, name: str) -> dict[str, Any] | None:
@@ -75,6 +77,44 @@ class Techifybots:
             return users
         except Exception as e:
             print("Error in get_all_users:", e)
+            return []
+
+
+    async def record_approved_requests(self, count: int, chat_id: int, title: str, chat_type: str) -> None:
+        """Persist successful approvals and remember chats where requests were handled."""
+        try:
+            if count > 0:
+                await self.stats.update_one(
+                    {"_id": "global"},
+                    {"$inc": {"total_approved": int(count)}},
+                    upsert=True,
+                )
+            await self.tracked_chats.update_one(
+                {"chat_id": int(chat_id)},
+                {"$set": {
+                    "chat_id": int(chat_id),
+                    "title": title or str(chat_id),
+                    "chat_type": str(getattr(chat_type, "value", chat_type)).lower().split(".")[-1],
+                    "updated_at": __import__("datetime").datetime.utcnow(),
+                }},
+                upsert=True,
+            )
+        except Exception as e:
+            print("Error recording approved requests:", e)
+
+    async def get_total_approved_requests(self) -> int:
+        try:
+            doc = await self.stats.find_one({"_id": "global"})
+            return int(doc.get("total_approved", 0)) if doc else 0
+        except Exception as e:
+            print("Error getting approved request total:", e)
+            return 0
+
+    async def get_tracked_chats(self) -> list[dict[str, Any]]:
+        try:
+            return await self.tracked_chats.find().to_list(length=None)
+        except Exception as e:
+            print("Error getting tracked chats:", e)
             return []
 
     async def delete_user(self, identifier: int | str | ObjectId) -> bool:
