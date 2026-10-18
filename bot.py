@@ -2,17 +2,20 @@ import kurikit
 import os
 import asyncio
 import aiohttp
+from pathlib import Path
 from datetime import datetime
 from pytz import timezone
 from pyrogram import Client
 from aiohttp import web
-from config import API_ID, API_HASH, BOT_TOKEN, ADMIN, LOG_CHANNEL, PING_URL
+from config import API_ID, API_HASH, BOT_TOKEN, ADMIN, LOG_CHANNEL, VERSION, PING_URL
 
 routes = web.RouteTableDef()
 
 @routes.get("/", allow_head=True)
 async def root_route(request):
-    return web.Response(text="<h3 align='center'><b>I am Alive</b></h3>", content_type='text/html')
+    html = (Path(__file__).parent / "index.html").read_text(encoding="utf-8")
+    html = html.replace("{VERSION}", VERSION)
+    return web.Response(text=html, content_type="text/html")
 
 async def web_server():
     app = web.Application(client_max_size=30_000_000)
