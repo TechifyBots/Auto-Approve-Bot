@@ -68,22 +68,42 @@ async def accept(client, message):
     await fwd_msg.delete()
     msg = await show.edit("**Accepting all join requests... Please wait.**")
     try:
+        total_approved = 0
         while True:
-            await acc.approve_all_chat_join_requests(chat_id)
-            await asyncio.sleep(1)
             join_requests = [req async for req in acc.get_chat_join_requests(chat_id)]
             if not join_requests:
                 break
-        await msg.edit("**✅ Successfully accepted all join requests.**")
+            await acc.approve_all_chat_join_requests(chat_id)
+            total_approved += len(join_requests)
+            await asyncio.sleep(1)
+        await tb.record_approved_requests(
+            total_approved,
+            chat_id,
+            getattr(info, "title", None) or str(chat_id),
+            getattr(info, "type", "unknown"),
+        )
+        await msg.edit(f"**✅ Successfully accepted all join requests.**\n\n📊 Approved: `{total_approved:,}`")
     except Exception as e:
         await msg.edit(f"**An error occurred:** `{str(e)}`")
 
 @Client.on_chat_join_request()
 async def approve_new(client, m):
+    await tb.record_approved_requests(
+        0,
+        m.chat.id,
+        getattr(m.chat, "title", None) or str(m.chat.id),
+        getattr(m.chat, "type", "unknown"),
+    )
     if not NEW_REQ_MODE:
         return
     try:
         await client.approve_chat_join_request(m.chat.id, m.from_user.id)
+        await tb.record_approved_requests(
+            1,
+            m.chat.id,
+            getattr(m.chat, "title", None) or str(m.chat.id),
+            getattr(m.chat, "type", "unknown"),
+        )
         try:
             await client.send_message(
                 m.from_user.id,
