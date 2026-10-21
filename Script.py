@@ -44,13 +44,13 @@ class text(object):
 
     STATS = """<blockquote>📊 𝗕𝗼𝘁 𝗦𝘁𝗮𝘁𝗶𝘀𝘁𝗶𝗰𝘀</blockquote>
 
-✅ <b>𝖳𝗈𝗍𝖺𝗅 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝗌 𝖠𝗉𝗉𝗋𝗈𝗏𝖾𝖽:</b> <code>{approved:,}</code>
+👤 <b>𝖳𝗈𝗍𝖺𝗅 𝖴𝗌𝖾𝗋𝗌:</b> <code>{users}</code>
 
-📢 <b>𝖳𝗈𝗍𝖺𝗅 𝖢𝗁𝖺𝗇𝗇𝖾𝗅𝗌:</b> <code>{channels:,}</code>
+👥 <b>𝖳𝗈𝗍𝖺𝗅 𝖦𝗋𝗈𝗎𝗉𝗌:</b> <code>{groups}</code>
 
-👥 <b>𝖳𝗈𝗍𝖺𝗅 𝖦𝗋𝗈𝗎𝗉𝗌:</b> <code>{groups:,}</code>
+📢 <b>𝖳𝗈𝗍𝖺𝗅 𝖢𝗁𝖺𝗇𝗇𝖾𝗅𝗌:</b> <code>{channels}</code>
 
-👤 <b>𝖳𝗈𝗍𝖺𝗅 𝖴𝗌𝖾𝗋𝗌:</b> <code>{users:,}</code>
+✅ <b>𝖳𝗈𝗍𝖺𝗅 𝖱𝖾𝗊𝗎𝖾𝗌𝗍𝗌 𝖠𝗉𝗉𝗋𝗈𝗏𝖾𝖽:</b> <code>{approved}</code>
 
 <i>𝖤𝗏𝖾𝗋𝗒𝗍𝗁𝗂𝗇𝗀 𝗂𝗌 𝗋𝗎𝗇𝗇𝗂𝗇𝗀 𝗌𝗆𝗈𝗈𝗍𝗁𝗅𝗒 ✨</i>"""
 
