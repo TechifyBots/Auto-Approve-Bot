@@ -16,3 +16,4 @@ AUTH_REQ_CHANNELS = list(map(int, os.environ.get("AUTH_REQ_CHANNELS", "").split(
 FSUB_EXPIRE = int(os.environ.get("FSUB_EXPIRE", 2))  # minutes, 0 = no expiry
 PING_URL = os.environ.get("PING_URL", "") # Service URL for Keep-Alive
 VERSION = os.environ.get("VERSION", "3.0")
+SOURCE_CODE = os.environ.get("SOURCE_CODE", "https://github.com/TechifyBots/Auto-Approve-Bot")
