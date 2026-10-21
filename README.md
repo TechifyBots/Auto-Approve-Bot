@@ -106,6 +106,7 @@ Watch this short video to understand **what the bot is**, **why it's useful**, *
 | `LOG_CHANNEL` | Log Channel |
 | `VERSION` | Bot Version |
 | `PING_URL` | Service URL for Keep-alive |
+| `SOURCE_CODE` | GitHub repository URL |
 
 
 ### 📚 Setup Guides
