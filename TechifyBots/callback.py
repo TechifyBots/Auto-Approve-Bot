@@ -8,7 +8,7 @@ from pyrogram.types import (
     WebAppInfo,
 )
 from Script import text
-from config import PICS, VERSION, ADMIN
+from config import PICS, VERSION, ADMIN, SOURCE_CODE
 from .database import tb
 
 @Client.on_callback_query()
@@ -48,7 +48,7 @@ async def callback_query_handler(client, query: CallbackQuery):
                 caption=text.ABOUT.format(VERSION)
             ),
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton('📂 𝖲𝗈𝗎𝗋𝖼𝖾 𝖢𝗈𝖽𝖾', url='https://github.com/TechifyBots/Auto-Approve-Bot')],
+                [InlineKeyboardButton('📂 𝖲𝗈𝗎𝗋𝖼𝖾 𝖢𝗈𝖽𝖾', url=SOURCE_CODE)],
                 [InlineKeyboardButton('☕ 𝖣𝗈𝗇𝖺𝗍𝖾', callback_data='donate'),
                  InlineKeyboardButton('📊 𝖲𝗍𝖺𝗍𝗌', callback_data='stats')],
                 [InlineKeyboardButton('↩️ 𝖡𝖺𝖼𝗄', callback_data='start', style=enums.ButtonStyle.PRIMARY)]
