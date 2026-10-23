@@ -69,7 +69,7 @@ async def callback_query_handler(client, query: CallbackQuery):
         await query.message.edit_media(
             InputMediaPhoto(media=random.choice(PICS), caption=caption),
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton('🌐 𝖶𝖾𝖻𝗌𝗂𝗍𝖾', web_app=WebAppInfo(url='https://anyaapprovebot.onrender.com'))],
+                [InlineKeyboardButton('🌐 𝖶𝖾𝖻𝗌𝗂𝗍𝖾', web_app=WebAppInfo(url='https://techifybots.vercel.app'))],
                 [InlineKeyboardButton('↩️ 𝖡𝖺𝖼𝗄', callback_data='about', style=enums.ButtonStyle.PRIMARY),
                  InlineKeyboardButton('❌ 𝖢𝗅𝗈𝗌𝖾', callback_data='close', style=enums.ButtonStyle.DANGER)]
             ])
