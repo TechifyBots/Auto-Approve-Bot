@@ -7,7 +7,7 @@ class text(object):
 
 <b><blockquote>‣ 𝖬𝖺𝗂𝗇𝗍𝖺𝗂𝗇𝖾𝖽 𝖡𝗒: <a href='https://rahuldhankhar.vercel.app/'>𝖱𝖺𝗁𝗎𝗅</a></blockquote></b>"""
 
-    LOG = """<blockquote>👁️‍🗨️ 𝗨𝘀𝗲𝗿 𝗗𝗲𝘁𝗮𝗶𝗹𝘀</blockquote>
+    LOG = """<blockquote>👤 𝗨𝘀𝗲𝗿 𝗜𝗻𝗳𝗼</blockquote>
 
 ○ 𝖨𝖣 : <code>{}</code>
 ○ 𝖣𝖢 : {}
