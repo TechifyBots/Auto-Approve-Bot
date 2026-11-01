@@ -1,6 +1,7 @@
 kurigram
-TgCrypto
+tgcrypto
 pytz
 motor
 aiohttp
+requests
 git+https://github.com/TechifyBots/Kurikit.git
