@@ -120,8 +120,8 @@ Watch this short video to understand **what the bot is**, **why it's useful**, *
 ## 🤖 Commands
 
 ```
-start - Check Bot Alive.
-help - Bot usage guide.
+start - Start the bot.
+help - Get the bot usage guide.
 login - login to your telegram account for string session
 logout - logout your telegram account
 accept - Accept all pending requests from a channel or group.
