@@ -67,10 +67,8 @@ A <b>modern</b>, <b>open-source</b>, and <b>developer-friendly</b> Telegram bot 
 
 - 🤖 **Auto Approval** — Automatically approve Telegram join requests
 - 👥 **Pending Requests** — Approve existing pending join requests
-- 🔒 **Multi Force Subscribe** — Support multiple public & private channels
 - 📢 **Broadcast System** — Send messages to all bot users
 - 🛠️ **Maintenance Mode** — Temporarily disable bot services
-- 🚫 **Ban & Unban Users** — Manage restricted users easily
 - ⚙️ **Easy to Customize** — Clean and beginner-friendly source code
 - 🚀 **Multi-Platform Deployment** — Deploy on Koyeb, Railway, Render, VPS & more
 - 💬 **24/7 Developer Support** — Get help whenever you need it
@@ -99,10 +97,6 @@ Watch this short video to understand **what the bot is**, **why it's useful**, *
 | `DB_URI` | MongoDB URI |
 | `ADMIN` | Telegram User ID |
 | `PICS` | Start Images |
-| `IS_FSUB` | Enable / Disable Force Subscribe |
-| `FSUB_EXPIRE` | Force Subscribe Expire Time |
-| `AUTH_CHANNELS` | Force Subscribe Channels |
-| `AUTH_REQ_CHANNELS` | Request FSUB Channels |
 | `LOG_CHANNEL` | Log Channel |
 | `VERSION` | Bot Version |
 | `PING_URL` | Service URL for Keep-alive |
@@ -125,11 +119,7 @@ help - Get the bot usage guide.
 login - login to your telegram account for string session
 logout - logout your telegram account
 accept - Accept all pending requests from a channel or group.
-ban - to ban a user.
-unban - to unban a user.
-banned - to check banned users.
-maintenance - Toggle maintenance mode
-broadcast - Broadcast messages to all bot users.
+broadcast - Broadcast messages to all bot users (Owner only).
 ```
 
 ---
