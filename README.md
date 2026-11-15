@@ -3,10 +3,9 @@
 <img src="https://bannerrender.vercel.app/api?type=waving&height=300&color=gradient&text=𝗔𝘂𝘁𝗼%20𝗔𝗽𝗽𝗿𝗼𝘃𝗲%20𝗕𝗼𝘁&fontAlignY=35&fontSize=80&desc=𝗔𝗱𝘃𝗮𝗻𝗰𝗲%20𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺%20𝗝𝗼𝗶𝗻%20𝗥𝗲𝗾𝘂𝗲𝘀𝘁%20𝗠𝗮𝗻𝗮𝗴𝗲𝗿&descAlignY=60"/>
 
 <p align="center">
-A <b>modern</b>, <b>open-source</b>, and <b>developer-friendly</b> Telegram bot that simplifies join request management with a focus on <b>performance</b>, <b>reliability</b>, and <b>ease of deployment</b>.
-</p>
 
-<p align="center">
+A <b>modern</b>, <b>open-source</b>, and <b>developer-friendly</b> Telegram bot that simplifies join request management with a focus on <b>performance</b>, <b>reliability</b>, and <b>ease of deployment</b>.
+
 ⭐ Fast • 🔒 Secure • 🚀 Easy to Deploy
 </p>
 
@@ -69,6 +68,8 @@ A <b>modern</b>, <b>open-source</b>, and <b>developer-friendly</b> Telegram bot 
 - 👥 **Pending Requests** — Approve existing pending join requests
 - 📢 **Broadcast System** — Send messages to all bot users
 - ⚙️ **Easy to Customize** — Clean and beginner-friendly source code
+- 📊 **Bot Statistics** — Monitor bot usage and user activity
+- 💾 **Database Integration** — Store bot data securely with MongoDB
 - 🚀 **Multi-Platform Deployment** — Deploy on Koyeb, Railway, Render, VPS & more
 - 💬 **24/7 Developer Support** — Get help whenever you need it
 
