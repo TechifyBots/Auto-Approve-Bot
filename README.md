@@ -68,7 +68,6 @@ A <b>modern</b>, <b>open-source</b>, and <b>developer-friendly</b> Telegram bot 
 - 🤖 **Auto Approval** — Automatically approve Telegram join requests
 - 👥 **Pending Requests** — Approve existing pending join requests
 - 📢 **Broadcast System** — Send messages to all bot users
-- 🛠️ **Maintenance Mode** — Temporarily disable bot services
 - ⚙️ **Easy to Customize** — Clean and beginner-friendly source code
 - 🚀 **Multi-Platform Deployment** — Deploy on Koyeb, Railway, Render, VPS & more
 - 💬 **24/7 Developer Support** — Get help whenever you need it
