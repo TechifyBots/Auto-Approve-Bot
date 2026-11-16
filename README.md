@@ -66,6 +66,7 @@ A <b>modern</b>, <b>open-source</b>, and <b>developer-friendly</b> Telegram bot 
 
 - 🤖 **Auto Approval** — Automatically approve Telegram join requests
 - 👥 **Pending Requests** — Approve existing pending join requests
+- 🔒 **Multi Force Subscribe** — Support multiple public & private channels
 - 📢 **Broadcast System** — Send messages to all bot users
 - ⚙️ **Easy to Customize** — Clean and beginner-friendly source code
 - 📊 **Bot Statistics** — Monitor bot usage and user activity
@@ -97,6 +98,10 @@ Watch this short video to understand **what the bot is**, **why it's useful**, *
 | `DB_URI` | MongoDB URI |
 | `ADMIN` | Telegram User ID |
 | `PICS` | Start Images |
+| `IS_FSUB` | Enable / Disable Force Subscribe |
+| `FSUB_EXPIRE` | Force Subscribe Expire Time |
+| `AUTH_CHANNELS` | Force Subscribe Channels |
+| `AUTH_REQ_CHANNELS` | Request FSUB Channels |
 | `LOG_CHANNEL` | Log Channel |
 | `VERSION` | Bot Version |
 | `PING_URL` | Service URL for Keep-alive |
